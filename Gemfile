@@ -38,3 +38,15 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'grape'
+gem 'grape-swagger'
+gem 'grape-swagger-rails'
+gem 'grape-rabl'
+
+group :development, :test do
+  gem 'rspec'
+  gem 'rspec-rails'
+  gem 'pry'
+  gem 'quiet_assets'
+  gem 'thin'
+end
