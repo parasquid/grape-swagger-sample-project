@@ -1,16 +1,21 @@
 module API
   module V1
-    class Authors < Grape::API
-      version 'v1'
-      format :json
-
+    class Authors < API::V1::Root
       resource :authors do
+        desc 'Returns an author'
+        params do
+          requires :id, desc: 'Author ID', type: Integer
+        end
+        get ':id' do
+          ::Author.find(params[:id])
+        end
+
         desc "Return list of authors"
         get do
           Author.all
         end
 
-        desc 'creates an author'
+        desc 'Creates an author'
         params do
           requires :name, desc: 'the author\'s name'
         end

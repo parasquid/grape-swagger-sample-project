@@ -1,9 +1,6 @@
 module API
   module V1
-    class Posts < Grape::API
-      version 'v1'
-      format :json
-
+    class Posts < API::V1::Root
       resource :posts do
         desc "Return list of recent posts"
         get do
@@ -12,7 +9,7 @@ module API
 
         desc 'creates a post'
         params do
-          requires :author_id, desc: 'the author ID (note: if the author ID does
+          optional :author_id, desc: 'the author ID (note: if the author ID does
             not exist, it will automatically create the author model and assign
             it a random name'
           requires :title, desc: 'the post title'
