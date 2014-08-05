@@ -51,6 +51,8 @@ GEM
     erubis (2.7.0)
     eventmachine (1.0.3)
     execjs (2.2.1)
+    faker (1.4.2)
+      i18n (~> 0.5)
     grape (0.8.0)
       activesupport
       builder
@@ -199,6 +201,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
+  faker
   grape
   grape-rabl
   grape-swagger

@@ -49,4 +49,5 @@ group :development, :test do
   gem 'pry'
   gem 'quiet_assets'
   gem 'thin'
+  gem 'faker'
 end
